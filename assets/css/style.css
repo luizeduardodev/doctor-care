@@ -80,16 +80,15 @@ section h2 {
 
 section h1 {
     font-size: 3.4rem; /* Font-size: 34px = 3.4rem, ou seja, dividiu 34 por 10*/
-
     line-height: 130%;
     margin-bottom: 2.4rem;
     color: var(--headline);
 }
 
 section .content p {
-    font-weight: 400;
     font-size: 1.6rem;
     line-height: 150%;
+    font-weight: 400;
     color: var(--paragraph);
 }
 
@@ -108,12 +107,12 @@ section .content p {
 
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
-    background-color: var(--primary-color);
     border: none;
-    transition: all 0.5s ease;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.5s ease;
+    color: #fff;
+    background-color: var(--primary-color);
 }
 
 .buttton:hover {
@@ -217,9 +216,9 @@ body.menu-expanded .menu {
 .menu ul:nth-child(1) {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 4.6rem;
 
-    /* margin-top: 6rem; */
+    margin-top: 6rem;
 
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -227,9 +226,9 @@ body.menu-expanded .menu {
 }
 
 .menu ul:nth-child(1) li a {
-    transition: all 0.5s;
     color: var(--brand-beige);
     text-decoration: none;
+    transition: all 0.5s;
 }
 
 .menu ul:nth-child(1) li a:hover {
@@ -423,7 +422,6 @@ body.menu-expanded button path {
 /* Footer */
 #footer {
     padding-block: 6rem;
-
     text-align: left;
     background-color: var(--primary-color);
     color: #fff;
@@ -471,10 +469,6 @@ body.menu-expanded button path {
 /* RESPONSIVO */
 @media screen and (min-width: 1024px) {
     /* GERAL */
-    /* body {
-        overflow: auto;
-    } */
-
     .wrapper {
         width: 100%;
         max-width: 1120px;
@@ -662,7 +656,7 @@ body.menu-expanded button path {
         gap: 0;
     }
 
-    #home .stats .stat + .stat {
+    #home .stats > .stat:not(:first-child) {
         border-left: 1px solid var(--primary-color);
     }
 
@@ -693,7 +687,6 @@ body.menu-expanded button path {
 
     #services .cards .card {
         width: 30.8%;
-
         flex-direction: column;
         flex-grow: 1;
     }
@@ -707,10 +700,7 @@ body.menu-expanded button path {
         grid-template-columns: 48rem 1fr;
         grid-template-areas: "B A";
         gap: 6.7rem;
-    }
-
-    #about .wrapper .col-a {
-        align-self: center;
+        align-items: center;
     }
 
     #about .wrapper .col-a header h2 {

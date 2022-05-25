@@ -42,7 +42,7 @@ const activeMenuAtCurrentSection = (section) => {
     //Verificar se a seção passou da linha;
     const sectionTop = section.offsetTop; //offsetTop pega o valor do top da seção;
     const sectionHeight = section.offsetHeight; //offsetHeight pega o valor da altura da seção;
-    
+
     //O topo da seção chegou ou ultrapassou a linha alto;
     const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
 
